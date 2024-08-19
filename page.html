@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Khadija Aftab - Professional Portfolio</title>
+    <style>
+        /* General Styles */
+/* General Styles */
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://journal.ahima.org/Portals/0/EasyDNNnews/2633/img-Federal-cybersecurity-image-iStock-1420039900.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #d1d1d1;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+/* Overlay to darken background for readability */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust transparency here */
+    z-index: -1; /* Ensure overlay stays behind content */
+}
+
+a {
+    color: #007aff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #33aaff;
+}
+
+/* Header Section */
+header {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent for visibility */
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1.5px;
+}
+
+header p {
+    font-size: 1.1em;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+    color: #d1d1d1;
+    margin: 0 20px;
+    font-size: 0.95em;
+    font-weight: 500;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+nav a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007aff;
+    transition: width .3s;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #007aff;
+}
+
+/* Section Styling */
+section {
+    width: 75%;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: rgba(20, 20, 20, 0.9); /* Semi-transparent background */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 30px;
+    border-left: 5px solid #007aff;
+    padding-left: 15px;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* About Section */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#about .profile-pic {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#about .about-text {
+    flex: 1;
+    margin-left: 20px;
+    color: #d1d1d1;
+}
+
+#about p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Skills Section */
+.skills-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-box {
+    flex: 1;
+    margin: 15px 0;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    min-width: 280px;
+}
+
+.skills-box h3 {
+    font-size: 1.15em;
+    font-weight: 500;
+    color: #007aff;
+    margin-bottom: 10px;
+}
+
+.skills-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-box ul li {
+    font-size: 1em;
+    color: #b0b0b0;
+    margin: 8px 0;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.project-box {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.project-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.project-box h3 {
+    font-size: 1.3em;
+    color: #007aff;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    font-size: 0.95em;
+    color: #b0b0b0;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 0.95em;
+    color: #b0b0b0;
+    margin: 20px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #0d0d0d;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    font-size: 0.85em;
+    margin: 0;
+}
+
+footer a {
+    color: #007aff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .skills-box,
+    .project-box {
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 0.85em;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Khadija Aftab</h1>
+        <p>Computer Security @ York University</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About Section -->
+   
+<section id="about">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsIk0Me5ewIGo7sKhZqjKxIE9zu0ferxQcaQ&s" alt="Profile Picture" class="profile-pic">
+    <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+            Hello! I am Khadija Aftab, a final-year BSc Computer Security student at the Lassonde School of Engineering at York University, Ontario, Canada. With a strong passion for cybersecurity, I have hands-on experience through internships and professional roles in digital fraud intelligence, cybersecurity control, and more. I am dedicated to applying my knowledge and skills to solve modern cybersecurity challenges.
+        </p>
+    </div>
+</section>
+
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skills-box">
+                <h3>Languages</h3>
+                <ul>
+                    <li>C (Programming Language)</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <div class="skills-box">
+                <h3>Technologies & Tools</h3>
+                <ul>
+                    <li>Docker</li>
+                    <li>HTML & CSS</li>
+                    <li>Node.js</li>
+                    <li>React</li>
+                    <li>REST APIs</li>
+                </ul>
+            </div>
+            <div class="skills-box">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Problem-Solving</li>
+                    <li>Team Collaboration</li>
+                    <li>Time Management</li>
+                    <li>Project Leadership</li>
+                    <li>Presentation Skills</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Professional Experience</h2>
+        <div class="projects-grid">
+            <div class="project-box">
+                <h3>Cybersecurity Intern</h3>
+                <p>Scotiabank - Cyber Control & Defense</p>
+            </div>
+            <div class="project-box">
+                <h3>Digital Crime Investigator Intern</h3>
+                <p>Scotiabank - Corporate Security Digital Fraud Intelligence</p>
+            </div>
+            <div class="project-box">
+                <h3>Recruitment & Campus Ambassador</h3>
+                <p>York University</p>
+            </div>
+            <div class="project-box">
+                <h3>Teaching Assistant</h3>
+                <p>EECS 1011 - Computational Thinking through Mechatronics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:aftabkhadija947@gmail.com">aftabkhadija947@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/khadijaaftab-1b4885238">linkedin.com/in/khadijaaftab</a></p>
+        <p>Location: Mississauga, Ontario, Canada</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© Khadija Aftab. All Rights Reserved.</p>
+        <p><a href="#contact">Contact Me</a></p>
+    </footer>
+
+</body>
+
+</html>
