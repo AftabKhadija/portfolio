@@ -22,34 +22,29 @@ This guide assumes a scenario similar to the project structure we shared, where 
    Run the following command to verify Docker is installed and running correctly:
    ```bash
    docker --version
-Part 3: Setting Up Your Project Structure
+
+## Part 3: Setting Up Your Project Structure
+
 For this guide, we’ll assume the following project structure:
 
-bash
-Copy code
-/your-project
-   /frontend
-      /project-frontend
-         - Dockerfile
-         - package.json
-         - src/ (React.js files)
-   /backend
-      /project-backend
-         - Dockerfile
-         - package.json
-         - server.js (Node.js API)
-   - schema.sql
-   - docker-compose.yml
-Here, we have separate directories for the frontend, backend, and a root-level file schema.sql to initialize the MySQL database. The docker-compose.yml is used for the entire project.
+/your-project /frontend /project-frontend - Dockerfile - package.json - src/ (React.js files) /backend /project-backend - Dockerfile - package.json - server.js (Node.js API)
 
-Part 4: Creating Dockerfiles
-1. Dockerfile for Frontend (React.js)
-A Dockerfile defines how to build your Docker image for the React frontend.
+schema.sql
+docker-compose.yml
+markdown
+Copy code
+
+Here, we have separate directories for the **frontend**, **backend**, and a root-level file `schema.sql` to initialize the **MySQL** database. The `docker-compose.yml` is used for the entire project.
+
+## Part 4: Creating Dockerfiles
+
+### 1. Dockerfile for Frontend (React.js)
+
+A `Dockerfile` defines how to build your Docker image for the React frontend.
 
 Navigate to the frontend directory:
 
-bash
-Copy code
+```bash
 cd your-project/frontend/project-frontend
 Create a file named Dockerfile with the following code:
 
@@ -107,7 +102,7 @@ In the root of your project, create a schema.sql file to define your database sc
 Part 5: Setting Up docker-compose.yml
 docker-compose.yml is used to orchestrate your entire application, managing the frontend, backend, and database containers.
 
-In the root of your project (/your-project), create a docker-compose.yml file:
+In the root of your project (/your-project), create a docker-compose.yml file with the following content:
 
 yaml
 Copy code
